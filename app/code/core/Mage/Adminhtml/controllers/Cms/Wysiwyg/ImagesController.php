@@ -190,7 +190,7 @@ class Mage_Adminhtml_Cms_Wysiwyg_ImagesController extends Mage_Adminhtml_Control
             $image->open($thumb);
             ob_start();
             $image->display();
-            $this->getResponse()->setBody(ob_get_contents());
+            $this->getResponse()->clearHeaders()->setBody(ob_get_contents());
             ob_end_clean();
         } else {
             // todo: genearte some placeholder

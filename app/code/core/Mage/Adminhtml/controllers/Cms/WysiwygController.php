@@ -52,7 +52,7 @@ class Mage_Adminhtml_Cms_WysiwygController extends Mage_Adminhtml_Controller_Act
         }
         ob_start();
         $image->display();
-        $this->getResponse()->setBody(ob_get_contents());
+        $this->getResponse()->clearHeaders()->setBody(ob_get_contents());
         ob_end_clean();
     }
 

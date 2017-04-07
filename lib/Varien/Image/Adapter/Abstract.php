@@ -81,8 +81,8 @@ abstract class Varien_Image_Adapter_Abstract
 
     public function getMimeType()
     {
-        if( $this->_fileType ) {
-            return $this->_fileType;
+        if( $this->_fileMimeType ) {
+            return $this->_fileMimeType;
         } else {
             list($this->_imageSrcWidth, $this->_imageSrcHeight, $this->_fileType, ) = getimagesize($this->_fileName);
             $this->_fileMimeType = image_type_to_mime_type($this->_fileType);
