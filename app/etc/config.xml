@@ -119,6 +119,11 @@
                     </cache_option>
                 </entities>
             </core_resource>
+            <newsletter_resource>
+                <rewrite>
+                    <subscriber>Optimus_Newsletter_Model_Resource_Subscriber</subscriber>
+                </rewrite>
+            </newsletter_resource>
         </models>
     </global>
     <default>

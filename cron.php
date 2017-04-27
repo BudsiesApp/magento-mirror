@@ -28,7 +28,7 @@
 chdir(dirname(__FILE__));
 
 require 'app/bootstrap.php';
-require 'app/Mage.php';
+#require 'app/Mage.php';
 
 if (!Mage::isInstalled()) {
     echo "Application is not installed yet, please complete install wizard first.";

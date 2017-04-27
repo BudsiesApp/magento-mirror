@@ -31,18 +31,15 @@ if (version_compare(phpversion(), '5.2.0', '<')) {
 
 $magentoRootDir = getcwd();
 $bootstrapFilename = $magentoRootDir . '/app/bootstrap.php';
-$mageFilename = $magentoRootDir . '/app/Mage.php';
 
 if (!file_exists($bootstrapFilename)) {
     echo 'Bootstrap file not found';
     exit;
 }
-if (!file_exists($mageFilename)) {
-    echo 'Mage file not found';
-    exit;
-}
+
+
 require $bootstrapFilename;
-require $mageFilename;
+
 
 if (!Mage::isInstalled()) {
     echo 'Application is not installed yet, please complete install wizard first.';
