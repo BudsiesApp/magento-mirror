@@ -20,15 +20,10 @@
  *
  * @category    Mage
  * @package     Mage
- * @copyright  Copyright (c) 2006-2016 X.commerce, Inc. and affiliates (http://www.magento.com)
+ * @copyright  Copyright (c) 2006-2017 X.commerce, Inc. and affiliates (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
-
-/**
- * Apply workaround for the libxml PHP bugs:
- * @link https://bugs.php.net/bug.php?id=62577
- * @link https://bugs.php.net/bug.php?id=64938
- */
-if (function_exists('libxml_disable_entity_loader')) {
-    libxml_disable_entity_loader(false);
-}
+ 
+require_once __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/Mage.class.php';
+require __DIR__ . '/Mage.bootstrap.php';

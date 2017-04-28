@@ -20,7 +20,7 @@
  *
  * @category    Mage
  * @package     Mage_Oauth
- * @copyright  Copyright (c) 2006-2016 X.commerce, Inc. and affiliates (http://www.magento.com)
+ * @copyright  Copyright (c) 2006-2017 X.commerce, Inc. and affiliates (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -541,7 +541,7 @@ class Mage_Oauth_Model_Server
             $this->_consumer->getSecret(),
             $this->_token->getSecret(),
             $this->_request->getMethod(),
-            $this->_request->getScheme() . '://' . $this->_request->getHttpHost() . $this->_request->getRequestUri()
+            $this->_request->getScheme() . '://' . $this->_request->getHttpHost(false) . $this->_request->getRequestUri()
         );
 
         if (!hash_equals($calculatedSign, $this->_protocolParams['oauth_signature'])) {
