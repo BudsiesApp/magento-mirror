@@ -437,7 +437,7 @@ abstract class Mage_Core_Model_Resource_Db_Collection_Abstract extends Varien_Da
      * Get model instance
      *
      * @param array $args
-     * @return Varien_Object
+     * @return string
      */
     public function getModelName($args = array())
     {

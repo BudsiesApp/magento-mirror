@@ -273,13 +273,6 @@ class Varien_Data_Collection_Db extends Varien_Data_Collection
         return $this->_setOrder($field, $direction);
     }
 
-    /**
-     * self::setOrder() alias
-     *
-     * @param string $field
-     * @param string $direction
-     * @return Varien_Data_Collection_Db
-     */
     public function addOrder($field, $direction = self::SORT_ORDER_DESC)
     {
         return $this->_setOrder($field, $direction);
@@ -369,16 +362,6 @@ class Varien_Data_Collection_Db extends Varien_Data_Collection
     {
     }
 
-    /**
-     * Add field filter to collection
-     *
-     * @see self::_getConditionSql for $condition
-     *
-     * @param   string|array $field
-     * @param   null|string|array $condition
-     *
-     * @return  Mage_Eav_Model_Entity_Collection_Abstract
-     */
     public function addFieldToFilter($field, $condition = null)
     {
         if (!is_array($field)) {
@@ -538,11 +521,6 @@ class Varien_Data_Collection_Db extends Varien_Data_Collection
         return $this;
     }
 
-    /**
-     * Before load action
-     *
-     * @return Varien_Data_Collection_Db
-     */
     protected function _beforeLoad()
     {
         return $this;

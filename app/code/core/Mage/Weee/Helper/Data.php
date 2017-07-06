@@ -183,7 +183,7 @@ class Mage_Weee_Helper_Data extends Mage_Core_Helper_Abstract
     /**
      * Returns diaplay type for price accordingly to current zone
      *
-     * @param Mage_Catalog_Model_Product $product
+     * @param Mage_Catalog_Model_Product|null $product
      * @param array|null                 $compareTo
      * @param string                     $zone
      * @param Mage_Core_Model_Store      $store

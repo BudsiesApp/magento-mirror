@@ -40,7 +40,7 @@ class Varien_Image
     /**
      * Constructor
      *
-     * @param Varien_Image_Adapter $adapter. Default value is GD2
+     * @param string $adapter. Default value is GD2
      * @param string $fileName
      * @return void
      */

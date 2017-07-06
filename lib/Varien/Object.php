@@ -232,14 +232,6 @@ class Varien_Object implements ArrayAccess
         return $this;
     }
 
-    /**
-     * Add data to the object.
-     *
-     * Retains previous data in the object.
-     *
-     * @param array $arr
-     * @return Varien_Object
-     */
     public function addData(array $arr)
     {
         foreach($arr as $index=>$value) {
@@ -787,12 +779,6 @@ class Varien_Object implements ArrayAccess
         return $newData!=$origData;
     }
 
-    /**
-     * Clears data changes status
-     *
-     * @param boolean $value
-     * @return Varien_Object
-     */
     public function setDataChanges($value)
     {
         $this->_hasDataChanges = (bool)$value;

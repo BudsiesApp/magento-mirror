@@ -58,14 +58,14 @@ class Mage_Reports_Model_Resource_Report_Collection
     /**
      * Model object
      *
-     * @var string
+     * @var Mage_Reports_Model_Report
      */
     protected $_model;
 
     /**
      * Intervals
      *
-     * @var int
+     * @var array
      */
     protected $_intervals;
 
