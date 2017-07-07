@@ -54,12 +54,6 @@ class Mage_Catalog_Model_Resource_Collection_Abstract extends Mage_Eav_Model_Ent
         return $this;
     }
 
-    /**
-     * Set store scope
-     *
-     * @param int|string|Mage_Core_Model_Store $storeId
-     * @return Mage_Catalog_Model_Resource_Collection_Abstract
-     */
     public function setStoreId($storeId)
     {
         if ($storeId instanceof Mage_Core_Model_Store) {

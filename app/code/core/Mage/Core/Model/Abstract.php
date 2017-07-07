@@ -213,12 +213,6 @@ abstract class Mage_Core_Model_Abstract extends Varien_Object
         return $this->getResourceCollection();
     }
 
-    /**
-     * Load object data
-     *
-     * @param   integer $id
-     * @return  Mage_Core_Model_Abstract
-     */
     public function load($id, $field=null)
     {
         $this->_beforeLoad($id, $field);

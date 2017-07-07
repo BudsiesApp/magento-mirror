@@ -331,22 +331,6 @@ class Zend_Db_Select
         return $this->joinInner($name, $cond, $cols, $schema);
     }
 
-    /**
-     * Add an INNER JOIN table and colums to the query
-     * Rows in both tables are matched according to the expression
-     * in the $cond argument.  The result set is comprised
-     * of all cases where rows from the left table match
-     * rows from the right table.
-     *
-     * The $name and $cols parameters follow the same logic
-     * as described in the from() method.
-     *
-     * @param  array|string|Zend_Db_Expr $name The table name.
-     * @param  string $cond Join on this condition.
-     * @param  array|string $cols The columns to select from the joined table.
-     * @param  string $schema The database name to specify, if any.
-     * @return Zend_Db_Select This Zend_Db_Select object.
-     */
     public function joinInner($name, $cond, $cols = self::SQL_WILDCARD, $schema = null)
     {
         return $this->_join(self::INNER_JOIN, $name, $cond, $cols, $schema);
