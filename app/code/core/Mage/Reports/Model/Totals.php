@@ -58,6 +58,9 @@ class Mage_Reports_Model_Totals
 
             foreach ($columns as $field=>$a) {
                 if ($field !== '') {
+                    if (isset($data[$field]) && !is_numeric($data[$field])) {
+                        $data[$field] = 0;
+                    }
                     $columns[$field]['value'] = $columns[$field]['value'] + (isset($data[$field]) ? $data[$field] : 0);
                 }
             }
