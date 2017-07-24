@@ -37,7 +37,7 @@ class Mage_Adminhtml_Block_Widget_Container extends Mage_Adminhtml_Block_Templat
     /**
      * So called "container controller" to specify group of blocks participating in some action
      *
-     * @var string
+     * @var string|null
      */
     protected $_controller = 'empty';
 
