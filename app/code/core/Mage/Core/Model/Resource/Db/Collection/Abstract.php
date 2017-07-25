@@ -343,7 +343,7 @@ abstract class Mage_Core_Model_Resource_Db_Collection_Abstract extends Varien_Da
      *
      * @param string $alias
      * @param string $expression
-     * @param array $fields
+     * @param array|string $fields
      * @return Mage_Core_Model_Resource_Db_Collection_Abstract
      */
     public function addExpressionFieldToSelect($alias, $expression, $fields)
