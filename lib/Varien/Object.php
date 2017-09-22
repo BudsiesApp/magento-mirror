@@ -240,18 +240,7 @@ class Varien_Object implements ArrayAccess
         return $this;
     }
 
-    /**
-     * Overwrite data in the object.
-     *
-     * $key can be string or array.
-     * If $key is string, the attribute value will be overwritten by $value
-     *
-     * If $key is an array, it will overwrite all the data in the object.
-     *
-     * @param string|array $key
-     * @param mixed $value
-     * @return Varien_Object
-     */
+
     public function setData($key, $value=null)
     {
         $this->_hasDataChanges = true;
