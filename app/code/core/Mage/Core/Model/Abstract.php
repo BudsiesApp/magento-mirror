@@ -288,11 +288,7 @@ abstract class Mage_Core_Model_Abstract extends Varien_Object
         return $this->hasDataChanges();
     }
 
-    /**
-     * Save object data
-     *
-     * @return Mage_Core_Model_Abstract
-     */
+
     public function save()
     {
         /**

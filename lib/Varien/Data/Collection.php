@@ -258,11 +258,7 @@ class Varien_Data_Collection implements IteratorAggregate, Countable
         return intval($this->_totalRecords);
     }
 
-    /**
-     * Retrieve collection first item
-     *
-     * @return Varien_Object
-     */
+
     public function getFirstItem()
     {
         $this->load();
