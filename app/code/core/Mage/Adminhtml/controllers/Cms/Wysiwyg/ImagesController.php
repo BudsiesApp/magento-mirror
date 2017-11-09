@@ -151,6 +151,10 @@ class Mage_Adminhtml_Cms_Wysiwyg_ImagesController extends Mage_Adminhtml_Control
             $this->_initAction();
             $targetPath = $this->getStorage()->getSession()->getCurrentPath();
             $result = $this->getStorage()->uploadFile($targetPath, $this->getRequest()->getParam('type'));
+
+            $fileObject = new Varien_Object($result);
+            Mage::dispatchEvent('mage_adminhtml_cms_wysiwyg_file_uploaded', ['fileObject' => $fileObject]);
+            $result['file'] = $fileObject->getFile();
         } catch (Exception $e) {
             $result = array('error' => $e->getMessage(), 'errorcode' => $e->getCode());
         }
