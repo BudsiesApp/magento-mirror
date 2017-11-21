@@ -152,9 +152,12 @@ class Mage_Adminhtml_Cms_Wysiwyg_ImagesController extends Mage_Adminhtml_Control
             $targetPath = $this->getStorage()->getSession()->getCurrentPath();
             $result = $this->getStorage()->uploadFile($targetPath, $this->getRequest()->getParam('type'));
 
-            $fileObject = new Varien_Object($result);
-            Mage::dispatchEvent('mage_adminhtml_cms_wysiwyg_file_uploaded', ['fileObject' => $fileObject]);
-            $result['file'] = $fileObject->getFile();
+            $imageFileObject = Mage::getModel('core/file_transport_image')
+                ->setPathToImage($result['path'] . $result['file']);
+
+            Mage::dispatchEvent('mage_adminhtml_cms_wysiwyg_file_uploaded', ['fileObject' => $imageFileObject]);
+
+            $result['file'] = $imageFileObject->getRelativePath();
         } catch (Exception $e) {
             $result = array('error' => $e->getMessage(), 'errorcode' => $e->getCode());
         }

@@ -480,24 +480,16 @@ class Mage_Catalog_Model_Product_Image extends Mage_Core_Model_Abstract
      */
     public function saveFile()
     {
-        $filename = (string)$this->getNewFile();
+        $filename = $this->getNewFile();
         $this->getImageProcessor()->save($filename);
 
-        $pathInfo = pathinfo($filename);
+        $imageFileObject = Mage::getModel('core/file_transport_image')->setPathToImage($filename);
 
-        $fileObject = new Varien_Object([
-            'name' => $pathInfo['basename'],
-            'type' => $this->getImageProcessor()->getMimeType(),
-            'path' => $pathInfo['dirname'],
-            'file' => '/' . $pathInfo['basename']
-        ]);
+        Mage::dispatchEvent('mage_catalog_product_image_saved', ['fileObject' => $imageFileObject]);
 
-        Mage::dispatchEvent('mage_catalog_product_image_saved', ['fileObject' => $fileObject]);
-
-        $this->_newFile = $fileObject->getPath() . $fileObject->getFile();
+        $this->_newFile = $imageFileObject->getPathToImage();
 
         Mage::helper('core/file_storage_database')->saveFile($this->getNewFile());
-        
         return $this;
     }
 
