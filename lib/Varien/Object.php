@@ -232,14 +232,6 @@ class Varien_Object implements ArrayAccess
         return $this;
     }
 
-    /**
-     * Add data to the object.
-     *
-     * Retains previous data in the object.
-     *
-     * @param array $arr
-     * @return Varien_Object
-     */
     public function addData(array $arr)
     {
         foreach($arr as $index=>$value) {
@@ -248,18 +240,7 @@ class Varien_Object implements ArrayAccess
         return $this;
     }
 
-    /**
-     * Overwrite data in the object.
-     *
-     * $key can be string or array.
-     * If $key is string, the attribute value will be overwritten by $value
-     *
-     * If $key is an array, it will overwrite all the data in the object.
-     *
-     * @param string|array $key
-     * @param mixed $value
-     * @return Varien_Object
-     */
+
     public function setData($key, $value=null)
     {
         $this->_hasDataChanges = true;
@@ -787,12 +768,6 @@ class Varien_Object implements ArrayAccess
         return $newData!=$origData;
     }
 
-    /**
-     * Clears data changes status
-     *
-     * @param boolean $value
-     * @return Varien_Object
-     */
     public function setDataChanges($value)
     {
         $this->_hasDataChanges = (bool)$value;

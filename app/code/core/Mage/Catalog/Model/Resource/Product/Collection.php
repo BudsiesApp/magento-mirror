@@ -480,14 +480,6 @@ class Mage_Catalog_Model_Resource_Product_Collection extends Mage_Catalog_Model_
         return parent::_loadAttributes($printQuery, $logQuery);
     }
 
-    /**
-     * Add attribute to entities in collection
-     * If $attribute=='*' select all attributes
-     *
-     * @param array|string|integer|Mage_Core_Model_Config_Element $attribute
-     * @param false|string $joinType
-     * @return Mage_Catalog_Model_Resource_Product_Collection
-     */
     public function addAttributeToSelect($attribute, $joinType = false)
     {
         if ($this->isEnabledFlat()) {
@@ -1377,14 +1369,6 @@ class Mage_Catalog_Model_Resource_Product_Collection extends Mage_Catalog_Model_
         return $this;
     }
 
-    /**
-     * Add attribute to filter
-     *
-     * @param Mage_Eav_Model_Entity_Attribute_Abstract|string $attribute
-     * @param array $condition
-     * @param string $joinType
-     * @return Mage_Catalog_Model_Resource_Product_Collection
-     */
     public function addAttributeToFilter($attribute, $condition = null, $joinType = 'inner')
     {
         if ($this->isEnabledFlat()) {

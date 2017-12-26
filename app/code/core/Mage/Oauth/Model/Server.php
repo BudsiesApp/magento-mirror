@@ -541,7 +541,7 @@ class Mage_Oauth_Model_Server
             $this->_consumer->getSecret(),
             $this->_token->getSecret(),
             $this->_request->getMethod(),
-            $this->_request->getScheme() . '://' . $this->_request->getHttpHost() . $this->_request->getRequestUri()
+            $this->_request->getScheme() . '://' . $this->_request->getHttpHost(false) . $this->_request->getRequestUri()
         );
 
         if (!hash_equals($calculatedSign, $this->_protocolParams['oauth_signature'])) {

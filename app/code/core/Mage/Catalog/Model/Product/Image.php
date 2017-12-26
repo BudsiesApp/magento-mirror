@@ -482,7 +482,14 @@ class Mage_Catalog_Model_Product_Image extends Mage_Core_Model_Abstract
     {
         $filename = $this->getNewFile();
         $this->getImageProcessor()->save($filename);
-        Mage::helper('core/file_storage_database')->saveFile($filename);
+
+        $imageFileObject = Mage::getModel('core/file_transport_image')->setPathToImage($filename);
+
+        Mage::dispatchEvent('mage_catalog_product_image_saved', ['fileObject' => $imageFileObject]);
+
+        $this->_newFile = $imageFileObject->getPathToImage();
+
+        Mage::helper('core/file_storage_database')->saveFile($this->getNewFile());
         return $this;
     }
 

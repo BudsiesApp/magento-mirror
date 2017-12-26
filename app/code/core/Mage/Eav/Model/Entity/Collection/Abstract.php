@@ -409,15 +409,6 @@ abstract class Mage_Eav_Model_Entity_Collection_Abstract extends Varien_Data_Col
         return $field;
     }
 
-    /**
-     * Add attribute to entities in collection
-     *
-     * If $attribute=='*' select all attributes
-     *
-     * @param   array|string|integer|Mage_Core_Model_Config_Element $attribute
-     * @param   false|string $joinType flag for joining attribute
-     * @return  Mage_Eav_Model_Entity_Collection_Abstract
-     */
     public function addAttributeToSelect($attribute, $joinType = false)
     {
         if (is_array($attribute)) {
@@ -742,16 +733,6 @@ abstract class Mage_Eav_Model_Entity_Collection_Abstract extends Varien_Data_Col
         return $this;
     }
 
-    /**
-     * Join a table
-     *
-     * @param string|array $table
-     * @param string $bind
-     * @param string|array $fields
-     * @param null|array $cond
-     * @param string $joinType
-     * @return Mage_Eav_Model_Entity_Collection_Abstract
-     */
     public function joinTable($table, $bind, $fields = null, $cond = null, $joinType = 'inner')
     {
         $tableAlias = null;

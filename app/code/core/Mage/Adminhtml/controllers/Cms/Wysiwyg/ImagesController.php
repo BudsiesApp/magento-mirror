@@ -151,6 +151,13 @@ class Mage_Adminhtml_Cms_Wysiwyg_ImagesController extends Mage_Adminhtml_Control
             $this->_initAction();
             $targetPath = $this->getStorage()->getSession()->getCurrentPath();
             $result = $this->getStorage()->uploadFile($targetPath, $this->getRequest()->getParam('type'));
+
+            $imageFileObject = Mage::getModel('core/file_transport_image')
+                ->setPathToImage($result['path'] . $result['file']);
+
+            Mage::dispatchEvent('mage_adminhtml_cms_wysiwyg_file_uploaded', ['fileObject' => $imageFileObject]);
+
+            $result['file'] = $imageFileObject->getRelativePath();
         } catch (Exception $e) {
             $result = array('error' => $e->getMessage(), 'errorcode' => $e->getCode());
         }
@@ -190,7 +197,7 @@ class Mage_Adminhtml_Cms_Wysiwyg_ImagesController extends Mage_Adminhtml_Control
             $image->open($thumb);
             ob_start();
             $image->display();
-            $this->getResponse()->setBody(ob_get_contents());
+            $this->getResponse()->clearHeaders()->setBody(ob_get_contents());
             ob_end_clean();
         } else {
             // todo: genearte some placeholder

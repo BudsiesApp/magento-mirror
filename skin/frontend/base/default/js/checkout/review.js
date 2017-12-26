@@ -107,10 +107,10 @@ OrderReviewController.prototype = {
     {
         if (this.shippingSelect && url && resultId) {
             this._updateOrderSubmit(true);
-            if (this._pleaseWait) {
-                this._pleaseWait.show();
-            }
             if ('' != this.shippingSelect.value) {
+				if (this._pleaseWait) {
+					this._pleaseWait.show();
+				}	
                 new Ajax.Updater(resultId, url, {
                     parameters: {isAjax:true, shipping_method:this.shippingSelect.value},
                     onComplete: function() {

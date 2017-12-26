@@ -44,14 +44,14 @@ class Mage_Catalog_Block_Product_List extends Mage_Catalog_Block_Product_Abstrac
     /**
      * Product Collection
      *
-     * @var Mage_Eav_Model_Entity_Collection_Abstract
+     * @var Mage_Catalog_Model_Resource_Product_Collection
      */
     protected $_productCollection;
 
     /**
      * Retrieve loaded category collection
      *
-     * @return Mage_Eav_Model_Entity_Collection_Abstract
+     * @return Mage_Catalog_Model_Resource_Product_Collection
      */
     protected function _getProductCollection()
     {
@@ -110,7 +110,7 @@ class Mage_Catalog_Block_Product_List extends Mage_Catalog_Block_Product_Abstrac
     /**
      * Retrieve loaded category collection
      *
-     * @return Mage_Eav_Model_Entity_Collection_Abstract
+     * @return Mage_Catalog_Model_Resource_Product_Collection
      */
     public function getLoadedProductCollection()
     {
