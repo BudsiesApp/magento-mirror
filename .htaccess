@@ -185,9 +185,6 @@
 
 </IfModule>
 
-RewriteCond %{HTTP_HOST} ^budsies.crayola.com
-RewriteRule ^ - [E=MAGE_RUN_CODE:crayola_store]
-
 ############################################
 ## Prevent character encoding issues from server overrides
 ## If you still have problems, use the second line instead
@@ -224,9 +221,6 @@ RewriteRule ^ - [E=MAGE_RUN_CODE:crayola_store]
 ## http://developer.yahoo.com/performance/rules.html#etags
 
     #FileETag none
-	
-	# Detect the Load-Balancer-Header and set the header magento expects
-	SetEnvIf X-Forwarded-Proto https HTTPS=on	
 
 ###########################################
 ## Deny access to cron.php
