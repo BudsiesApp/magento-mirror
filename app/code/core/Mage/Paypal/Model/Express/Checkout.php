@@ -915,6 +915,8 @@ class Mage_Paypal_Model_Express_Checkout
     {
         $quote = $this->_quote;
         $quote->setCustomerId(null)
+            ->setCustomerFirstname($quote->getBillingAddress()->getFirstname())
+            ->setCustomerLastname($quote->getBillingAddress()->getLastname())
             ->setCustomerEmail($quote->getBillingAddress()->getEmail())
             ->setCustomerIsGuest(true)
             ->setCustomerGroupId(Mage_Customer_Model_Group::NOT_LOGGED_IN_ID);
