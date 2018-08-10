@@ -841,7 +841,7 @@ class Mage_Core_Model_Design_Package
             $pathParts = explode(DS, $uri);
             $fileDirParts = explode(DS, $this->_callbackFileDir);
             $store = $this->getStore();
-            if (is_int($store)) {
+            if (is_int($store) || is_string($store)) {
                 $store = Mage::app()->getStore($store);
             }
             if ($store->isAdmin()) {
