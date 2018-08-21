@@ -150,7 +150,7 @@ class Mage_Paypal_Model_Payflowpro extends  Mage_Payment_Model_Method_Cc
     /**
      * Authorize payment
      *
-     * @param Mage_Sales_Model_Order_Payment $payment
+     * @param Varien_Object $payment
      * @return Mage_Paypal_Model_Payflowpro
      */
     public function authorize(Varien_Object $payment, $amount)
@@ -191,7 +191,7 @@ class Mage_Paypal_Model_Payflowpro extends  Mage_Payment_Model_Method_Cc
     /**
      * Capture payment
      *
-     * @param Mage_Sales_Model_Order_Payment $payment
+     * @param Varien_Object $payment
      * @return Mage_Paypal_Model_Payflowpro
      */
     public function capture(Varien_Object $payment, $amount)
@@ -233,7 +233,7 @@ class Mage_Paypal_Model_Payflowpro extends  Mage_Payment_Model_Method_Cc
     /**
      * Void payment
      *
-     * @param Mage_Sales_Model_Order_Payment $payment
+     * @param Varien_Object $payment
      * @return Mage_Paypal_Model_Payflowpro
      */
     public function void(Varien_Object $payment)
@@ -291,7 +291,7 @@ class Mage_Paypal_Model_Payflowpro extends  Mage_Payment_Model_Method_Cc
     /**
      * Refund capture
      *
-     * @param Mage_Sales_Model_Order_Payment $payment
+     * @param Varien_Object $payment
      * @return Mage_Paypal_Model_Payflowpro
      */
     public function refund(Varien_Object $payment, $amount)
@@ -446,7 +446,7 @@ class Mage_Paypal_Model_Payflowpro extends  Mage_Payment_Model_Method_Cc
      /**
       * Return request object with information for 'authorization' or 'sale' action
       *
-      * @param Mage_Sales_Model_Order_Payment $payment
+      * @param Varien_Object $payment
       * @param float $amount
       * @return Varien_Object
       */
@@ -507,7 +507,7 @@ class Mage_Paypal_Model_Payflowpro extends  Mage_Payment_Model_Method_Cc
      /**
       * Return request object with basic information for gateway request
       *
-      * @param Mage_Sales_Model_Order_Payment $payment
+      * @param Varien_Object $payment
       * @return Varien_Object
       */
     protected function _buildBasicRequest(Varien_Object $payment)

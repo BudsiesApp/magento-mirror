@@ -25,3 +25,11 @@
  */
  
 require __DIR__ . '/bootstrap.php';
+
+/** AUTOLOADER PATCH **/
+if (file_exists($autoloaderPath = BP . DS . 'vendor/autoload.php') ||
+	file_exists($autoloaderPath = BP . DS . '../vendor/autoload.php')
+) {
+	require $autoloaderPath;
+}
+/** AUTOLOADER PATCH **/
