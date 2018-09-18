@@ -689,7 +689,7 @@ class Mage_Core_Model_Design_Package
      * @param array $srcFiles
      * @param string|bool $targetFile - file path to be written
      * @param bool $mustMerge
-     * @param callback $beforeMergeCallback
+     * @param callable $beforeMergeCallback
      * @param array|string $extensionsFilter
      * @return bool|string
      */
