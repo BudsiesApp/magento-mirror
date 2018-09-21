@@ -153,7 +153,7 @@ class Mage_Adminhtml_Cms_Wysiwyg_ImagesController extends Mage_Adminhtml_Control
             $result = $this->getStorage()->uploadFile($targetPath, $this->getRequest()->getParam('type'));
 
             $imageFileObject = Mage::getModel('core/file_transport_image')
-                ->setPathToImage($result['path'] . $result['file']);
+                ->setPathToImage(rtrim($result['path'] . DS . $result['file']));
 
             Mage::dispatchEvent('mage_adminhtml_cms_wysiwyg_file_uploaded', ['fileObject' => $imageFileObject]);
 
