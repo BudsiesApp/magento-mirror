@@ -200,6 +200,16 @@ abstract class Mage_Api2_Model_Resource
      */
     public function dispatch()
     {
+        $userType = $this->getUserType();
+
+        if ($userType === Mage_Api2_Model_Auth_User_Admin::USER_TYPE) {
+            $userModel = Mage::getModel('admin/user');
+            $admin = $userModel->load($this->getApiUser()->getUserId());
+            if (!(bool)$admin->getIsActive()) {
+                $this->_critical('Access denied', 403);
+            }
+        }
+
         switch ($this->getActionType() . $this->getOperation()) {
             /* Create */
             case self::ACTION_TYPE_ENTITY . self::OPERATION_CREATE:
