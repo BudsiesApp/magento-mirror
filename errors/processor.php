@@ -468,7 +468,7 @@ class Error_Processor
         }
 
         $reportData = array_map('strip_tags', $reportData);
-        @file_put_contents($this->_reportFile, serialize($reportData));
+        @file_put_contents($this->_reportFile, serialize($reportData) . PHP_EOL);
         @chmod($this->_reportFile, 0640);
 
         if (isset($reportData['skin']) && self::DEFAULT_SKIN != $reportData['skin']) {
