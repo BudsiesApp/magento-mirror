@@ -166,7 +166,9 @@ RegionUpdater.prototype = {
     {
         this.countryEl = $(countryEl);
         this.regionTextEl = $(regionTextEl);
+        this.regionTextWrapperEl = jQuery(this.regionTextEl).closest('._region-text-wrapper')[0];
         this.regionSelectEl = $(regionSelectEl);
+        this.regionSelectWrapperEl = jQuery(this.regionSelectEl).closest('._region-select-wrapper')[0];
         this.zipEl = $(zipEl);
         this.config = regions['config'];
         delete regions.config;
@@ -277,10 +279,10 @@ RegionUpdater.prototype = {
             this.sortSelect();
             if (this.disableAction == 'hide') {
                 if (this.regionTextEl) {
-                    this.regionTextEl.style.display = 'none';
+                    this.regionTextWrapperEl.style.display = 'none';
                 }
 
-                this.regionSelectEl.style.display = '';
+                this.regionSelectWrapperEl.style.display = '';
             } else if (this.disableAction == 'disable') {
                 if (this.regionTextEl) {
                     this.regionTextEl.disabled = true;
@@ -293,9 +295,9 @@ RegionUpdater.prototype = {
             this.sortSelect();
             if (this.disableAction == 'hide') {
                 if (this.regionTextEl) {
-                    this.regionTextEl.style.display = '';
+                    this.regionTextWrapperEl.style.display = '';
                 }
-                this.regionSelectEl.style.display = 'none';
+                this.regionSelectWrapperEl.style.display = 'none';
                 Validation.reset(this.regionSelectEl);
             } else if (this.disableAction == 'disable') {
                 if (this.regionTextEl) {
