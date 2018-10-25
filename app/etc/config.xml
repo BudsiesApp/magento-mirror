@@ -148,7 +148,7 @@
         </system>
         <dev>
             <template>
-                <allow_symlink>0</allow_symlink>
+                <allow_symlink>1</allow_symlink>
             </template>
         </dev>
         <general>
