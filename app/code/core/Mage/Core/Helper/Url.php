@@ -42,15 +42,12 @@ class Mage_Core_Helper_Url extends Mage_Core_Helper_Abstract
     public function getCurrentUrl()
     {
         $request = Mage::app()->getRequest();
-        $port = $request->getServer('SERVER_PORT');
-        if ($port) {
-            $defaultPorts = array(
-                Mage_Core_Controller_Request_Http::DEFAULT_HTTP_PORT,
-                Mage_Core_Controller_Request_Http::DEFAULT_HTTPS_PORT
-            );
-            $port = (in_array($port, $defaultPorts)) ? '' : ':' . $port;
+        $store   = Mage::app()->getStore();
+        $baseUrl = $store->getBaseUrl();
+        if (substr($baseUrl, -1) === '/') {
+            $baseUrl = substr($baseUrl, 0, -1);
         }
-        $url = $request->getScheme() . '://' . $request->getHttpHost() . $port . $request->getServer('REQUEST_URI');
+        $url = $baseUrl . $request->getServer('REQUEST_URI');
         return $this->escapeUrl($url);
 //        return $this->_getUrl('*/*/*', array('_current' => true, '_use_rewrite' => true));
     }
