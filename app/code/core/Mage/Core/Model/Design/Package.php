@@ -253,6 +253,7 @@ class Mage_Core_Model_Design_Package
                 foreach (array('layout', 'template', 'skin', 'locale') as $type) {
                     $this->_theme[$type] = func_get_arg(0);
                 }
+                $this->_theme['default'] = '';
                 break;
 
             case 2:
