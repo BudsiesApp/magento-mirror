@@ -49,7 +49,6 @@ class Mage_Core_Helper_Url extends Mage_Core_Helper_Abstract
         }
         $url = $baseUrl . $request->getServer('REQUEST_URI');
         return $this->escapeUrl($url);
-//        return $this->_getUrl('*/*/*', array('_current' => true, '_use_rewrite' => true));
     }
 
     /**
