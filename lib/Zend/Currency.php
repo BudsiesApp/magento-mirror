@@ -357,7 +357,7 @@ class Zend_Currency
         }
 
         if (strlen($symbol) > 1) {
-            $symbol .= '&nbsp;';
+            $symbol .= ' ';
         }
 
         return $symbol;
