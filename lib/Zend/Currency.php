@@ -356,6 +356,10 @@ class Zend_Currency
             return null;
         }
 
+        if (strlen($symbol) > 1) {
+            $symbol .= ' ';
+        }
+
         return $symbol;
     }
 
