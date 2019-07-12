@@ -20,7 +20,7 @@
  *
  * @category    Mage
  * @package     Mage_Cms
- * @copyright  Copyright (c) 2006-2018 Magento, Inc. (http://www.magento.com)
+ * @copyright  Copyright (c) 2006-2019 Magento, Inc. (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -137,7 +137,9 @@ class Mage_Cms_Model_Wysiwyg_Images_Storage extends Varien_Object
             $item->setUrl($helper->getCurrentUrl() . $item->getBasename());
 
             if ($this->isImage($item->getBasename())) {
-                $thumbUrl = $this->getThumbnailUrl($item->getFilename(), true);
+                $thumbUrl = $this->getThumbnailUrl(
+                    Mage_Core_Model_File_Uploader::getCorrectFileName($item->getFilename()),
+                    true);
                 // generate thumbnail "on the fly" if it does not exists
                 if(! $thumbUrl) {
                     $thumbUrl = Mage::getSingleton('adminhtml/url')->getUrl('*/*/thumbnail', array('file' => $item->getId()));
@@ -386,7 +388,9 @@ class Mage_Cms_Model_Wysiwyg_Images_Storage extends Varien_Object
         $height = $this->getConfigData('resize_height');
         $image->keepAspectRatio($keepRation);
         $image->resize($width, $height);
-        $dest = $targetDir . DS . pathinfo($source, PATHINFO_BASENAME);
+        $dest = $targetDir
+            . DS
+            . Mage_Core_Model_File_Uploader::getCorrectFileName(pathinfo($source, PATHINFO_BASENAME));
         $image->save($dest);
         if (is_file($dest)) {
             return $dest;
