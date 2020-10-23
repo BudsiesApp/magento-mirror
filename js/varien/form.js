@@ -244,6 +244,7 @@ RegionUpdater.prototype = {
 
     update: function()
     {
+        this.toggleTelephoneDisplay();
         if (this.regions[this.countryEl.value]) {
             var i, option, region, def;
 
@@ -317,6 +318,25 @@ RegionUpdater.prototype = {
         // Make Zip and its label required/optional
         var zipUpdater = new ZipUpdater(this.countryEl.value, this.zipEl);
         zipUpdater.update();
+    },
+
+    toggleTelephoneDisplay: function () {
+        var countryElementId = this.countryEl.id;
+        var type = countryElementId.split(':')[0];
+        var billingOrShippingForm = ('#co-' + type + '-form');
+        if (!billingOrShippingForm.length) {
+            return;
+        }
+        var telephoneLineBlock = jQuery('._telephone-line', billingOrShippingForm);
+        var telephoneInput = jQuery('[name="' + type + '[telephone]"]', telephoneLineBlock);
+        if (this.countryEl.value !== 'US') {
+            telephoneLineBlock.addClass('-required');
+            telephoneInput.addClass('required-entry');
+        } else {
+            telephoneLineBlock.removeClass('-required');
+            telephoneInput.removeClass('required-entry validation-failed');
+            jQuery('.validation-advice', telephoneLineBlock).hide();
+        }
     },
 
     setMarkDisplay: function(elem, display){
