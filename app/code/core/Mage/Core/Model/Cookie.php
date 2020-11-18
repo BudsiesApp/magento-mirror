@@ -250,6 +250,9 @@ class Mage_Core_Model_Cookie
         if (is_null($httponly)) {
             $httponly = $this->getHttponly();
         }
+        if (is_null($sameSite)) {
+            $sameSite = $this->getSameSite();
+        }
 
         if ($sameSite === 'None') {
             // Enforce specification SameSite None requires secure
