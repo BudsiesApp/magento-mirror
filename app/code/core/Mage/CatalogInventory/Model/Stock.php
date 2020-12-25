@@ -93,7 +93,7 @@ class Mage_CatalogInventory_Model_Stock extends Mage_Core_Model_Abstract
     /**
      * Retrieve items collection object with stock filter
      *
-     * @return unknown
+     * @return mixed
      */
     public function getItemCollection()
     {

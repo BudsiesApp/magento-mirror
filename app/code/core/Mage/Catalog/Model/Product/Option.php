@@ -415,7 +415,7 @@ class Mage_Catalog_Model_Product_Option extends Mage_Core_Model_Abstract
      *  return converted percent to price
      *
      * @param bool $flag
-     * @return decimal
+     * @return float
      */
     public function getPrice($flag = false)
     {
@@ -492,7 +492,7 @@ class Mage_Catalog_Model_Product_Option extends Mage_Core_Model_Abstract
      *
      * @param array $optionIds
      * @param int $store_id
-     * @return unknown
+     * @return mixed
      */
     public function getOptionValuesByOptionId($optionIds, $store_id)
     {

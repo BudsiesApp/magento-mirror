@@ -71,7 +71,7 @@ abstract class Mage_Sales_Model_Quote_Address_Total_Abstract
     /**
      * Retrieve total code name
      *
-     * @return unknown
+     * @return mixed
      */
     public function getCode()
     {

@@ -290,7 +290,7 @@ class Mage_Adminhtml_Block_Sales_Order_Create_Giftmessage_Form extends Mage_Admi
     /**
      * Retrive field html id prefix
      *
-     * @return unknown
+     * @return mixed
      */
     protected  function _getFieldIdPrefix()
     {

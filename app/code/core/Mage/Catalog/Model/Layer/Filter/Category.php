@@ -113,7 +113,7 @@ class Mage_Catalog_Model_Layer_Filter_Category extends Mage_Catalog_Model_Layer_
      * Validate category for be using as filter
      *
      * @param   Mage_Catalog_Model_Category $category
-     * @return unknown
+     * @return mixed
      */
     protected function _isValidCategory($category)
     {

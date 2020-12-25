@@ -51,7 +51,7 @@ class Mage_Cron_Model_Resource_Schedule extends Mage_Core_Model_Resource_Db_Abst
      * @param unknown_type $scheduleId
      * @param String $newStatus
      * @param String $currentStatus
-     * @return unknown
+     * @return mixed
      */
     public function trySetJobStatusAtomic($scheduleId, $newStatus, $currentStatus)
     {

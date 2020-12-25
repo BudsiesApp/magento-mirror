@@ -293,7 +293,7 @@ abstract class Mage_Eav_Model_Entity_Collection_Abstract extends Varien_Data_Col
      * @param Mage_Eav_Model_Entity_Attribute_Interface|integer|string|array $attribute
      * @param null|string|array $condition
      * @param string $operator
-     * @return Mage_Eav_Model_Entity_Collection_Abstract
+     * @return $this
      */
     public function addAttributeToFilter($attribute, $condition = null, $joinType = 'inner')
     {

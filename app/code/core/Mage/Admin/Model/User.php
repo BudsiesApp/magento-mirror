@@ -58,7 +58,7 @@
  * @package     Mage_Admin
  * @author      Magento Core Team <core@magentocommerce.com>
  */
-class Mage_Admin_Model_User extends Mage_Core_Model_Abstract
+class Mage_Admin_Model_User extends Mage_Core_Model_Abstract    
 {
     /**#@+
      * Configuration paths for email templates and identities
@@ -443,7 +443,7 @@ class Mage_Admin_Model_User extends Mage_Core_Model_Abstract
     /**
      * Check if user is assigned to any role
      *
-     * @param int|Mage_Core_Admin_Model_User $user
+     * @param int|Mage_Admin_Model_User $user
      * @return null|boolean|array
      */
     public function hasAssigned2Role($user)

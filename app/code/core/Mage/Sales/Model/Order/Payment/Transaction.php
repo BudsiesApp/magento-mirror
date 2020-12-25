@@ -346,7 +346,7 @@ class Mage_Sales_Model_Order_Payment_Transaction extends Mage_Core_Model_Abstrac
      * Logic is similar to closeAuthorization(), but for a capture transaction
      * @see self::closeAuthorization()
      * @para, bool $shouldSave
-     * @param unknown_type $shouldSave
+     * @param mixed $shouldSave
      */
     public function closeCapture($shouldSave = true)
     {

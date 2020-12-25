@@ -512,7 +512,7 @@ class Mage_Core_Model_Layout extends Varien_Simplexml_Config
      * Get block object by name
      *
      * @param string $name
-     * @return Mage_Core_Block_Abstract
+     * @return Mage_Core_Block_Abstract|false
      */
     public function getBlock($name)
     {

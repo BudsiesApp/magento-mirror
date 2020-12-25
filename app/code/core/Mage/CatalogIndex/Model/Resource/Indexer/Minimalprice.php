@@ -50,7 +50,7 @@ class Mage_CatalogIndex_Model_Resource_Indexer_Minimalprice extends Mage_Catalog
      * Enter description here ...
      *
      * @param unknown_type $conditions
-     * @return unknown
+     * @return mixed
      */
     public function getMinimalValue($conditions)
     {

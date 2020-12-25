@@ -1201,7 +1201,7 @@ class Mage_Eav_Model_Entity_Setup extends Mage_Core_Model_Resource_Setup
      * - no-main
      * - no-default-types
      * - types
-     * @return unknown
+     * @return mixed
      */
     public function createEntityTables($baseTableName, array $options = array())
     {

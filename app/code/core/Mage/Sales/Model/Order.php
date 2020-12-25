@@ -900,7 +900,7 @@ class Mage_Sales_Model_Order extends Mage_Sales_Model_Abstract
     /**
      * Retrieve order payment model object
      *
-     * @return Mage_Sales_Model_Order_Payment
+     * @return Mage_Sales_Model_Order_Payment|false
      */
     public function getPayment()
     {
@@ -947,7 +947,7 @@ class Mage_Sales_Model_Order extends Mage_Sales_Model_Abstract
     /**
      * Retrieve order billing address
      *
-     * @return Mage_Sales_Model_Order_Address
+     * @return Mage_Sales_Model_Order_Address|false
      */
     public function getBillingAddress()
     {
@@ -962,7 +962,7 @@ class Mage_Sales_Model_Order extends Mage_Sales_Model_Abstract
     /**
      * Retrieve order shipping address
      *
-     * @return Mage_Sales_Model_Order_Address
+     * @return Mage_Sales_Model_Order_Address|false
      */
     public function getShippingAddress()
     {
@@ -1935,7 +1935,7 @@ class Mage_Sales_Model_Order extends Mage_Sales_Model_Abstract
     /**
      * Retrieve order invoices collection
      *
-     * @return unknown
+     * @return mixed
      */
     public function getInvoiceCollection()
     {
@@ -1955,7 +1955,7 @@ class Mage_Sales_Model_Order extends Mage_Sales_Model_Abstract
      /**
      * Retrieve order shipments collection
      *
-     * @return unknown
+     * @return mixed
      */
     public function getShipmentsCollection()
     {
@@ -1974,7 +1974,7 @@ class Mage_Sales_Model_Order extends Mage_Sales_Model_Abstract
     /**
      * Retrieve order creditmemos collection
      *
-     * @return unknown
+     * @return mixed
      */
     public function getCreditmemosCollection()
     {
@@ -1993,7 +1993,7 @@ class Mage_Sales_Model_Order extends Mage_Sales_Model_Abstract
     /**
      * Retrieve order tracking numbers collection
      *
-     * @return unknown
+     * @return mixed
      */
     public function getTracksCollection()
     {

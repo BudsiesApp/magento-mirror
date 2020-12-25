@@ -149,9 +149,9 @@ abstract class Mage_Catalog_Block_Product_View_Options_Abstract extends Mage_Cor
     /**
      * Get price with including/excluding tax
      *
-     * @param decimal $price
+     * @param float $price
      * @param bool $includingTax
-     * @return decimal
+     * @return float
      */
     public function getPrice($price, $includingTax = null)
     {

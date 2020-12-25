@@ -547,7 +547,7 @@ class Mage_Sales_Model_Quote_Item extends Mage_Sales_Model_Quote_Item_Abstract
     /**
      * Return real product type of item
      *
-     * @return unknown
+     * @return mixed
      */
     public function getRealProductType()
     {

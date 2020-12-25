@@ -125,6 +125,8 @@ class Varien_Data_Collection implements IteratorAggregate, Countable
      * @param string $field
      * @param string $value
      * @param string $type and|or|string
+     * 
+     * @return $this
      */
     public function addFilter($field, $value, $type = 'and')
     {
@@ -189,7 +191,7 @@ class Varien_Data_Collection implements IteratorAggregate, Countable
      * Set collection loading status flag
      *
      * @param unknown_type $flag
-     * @return unknown
+     * @return $this
      */
     protected function _setIsLoaded($flag = true)
     {
@@ -340,7 +342,7 @@ class Varien_Data_Collection implements IteratorAggregate, Countable
      *
      * @param   string $column
      * @param   mixed $value
-     * @return  Varien_Object || null
+     * @return  Varien_Object|null
      */
     public function getItemByColumnValue($column, $value)
     {
@@ -358,7 +360,7 @@ class Varien_Data_Collection implements IteratorAggregate, Countable
      * Adding item to item array
      *
      * @param   Varien_Object $item
-     * @return  Varien_Data_Collection
+     * @return  $this
      */
     public function addItem(Varien_Object $item)
     {
@@ -379,7 +381,7 @@ class Varien_Data_Collection implements IteratorAggregate, Countable
      * Add item that has no id to collection
      *
      * @param Varien_Object $item
-     * @return Varien_Data_Collection
+     * @return $this
      */
     protected function _addItem($item)
     {
@@ -416,7 +418,7 @@ class Varien_Data_Collection implements IteratorAggregate, Countable
      * Remove item from collection by item key
      *
      * @param   mixed $key
-     * @return  Varien_Data_Collection
+     * @return  $this
      */
     public function removeItemByKey($key)
     {
@@ -429,7 +431,7 @@ class Varien_Data_Collection implements IteratorAggregate, Countable
     /**
      * Clear collection
      *
-     * @return Varien_Data_Collection
+     * @return $this
      */
     public function clear()
     {
@@ -476,7 +478,7 @@ class Varien_Data_Collection implements IteratorAggregate, Countable
      *
      * @param   mixed $key
      * @param   mixed $value
-     * @return  Varien_Data_Collection
+     * @return  $this
      */
     public function setDataToAll($key, $value=null)
     {
@@ -496,7 +498,7 @@ class Varien_Data_Collection implements IteratorAggregate, Countable
      * Set current page
      *
      * @param   int $page
-     * @return  Varien_Data_Collection
+     * @return  $this
      */
     public function setCurPage($page)
     {
@@ -508,7 +510,7 @@ class Varien_Data_Collection implements IteratorAggregate, Countable
      * Set collection page size
      *
      * @param   int $size
-     * @return  Varien_Data_Collection
+     * @return  $this
      */
     public function setPageSize($size)
     {
@@ -521,7 +523,7 @@ class Varien_Data_Collection implements IteratorAggregate, Countable
      *
      * @param   string $field
      * @param   string $direction
-     * @return  Varien_Data_Collection
+     * @return  $this
      */
     public function setOrder($field, $direction = self::SORT_ORDER_DESC)
     {
@@ -533,7 +535,7 @@ class Varien_Data_Collection implements IteratorAggregate, Countable
      * Set collection item class name
      *
      * @param   string $className
-     * @return  Varien_Data_Collection
+     * @return  $this
      */
     function setItemObjectClass($className)
     {
@@ -561,7 +563,7 @@ class Varien_Data_Collection implements IteratorAggregate, Countable
     /**
      * Render sql select conditions
      *
-     * @return  Varien_Data_Collection
+     * @return  $this
      */
     protected function _renderFilters()
     {
@@ -571,7 +573,7 @@ class Varien_Data_Collection implements IteratorAggregate, Countable
     /**
      * Render sql select orders
      *
-     * @return  Varien_Data_Collection
+     * @return  $this
      */
     protected function _renderOrders()
     {
@@ -581,7 +583,7 @@ class Varien_Data_Collection implements IteratorAggregate, Countable
     /**
      * Render sql select limit
      *
-     * @return  Varien_Data_Collection
+     * @return  $this
      */
     protected function _renderLimit()
     {
@@ -601,7 +603,7 @@ class Varien_Data_Collection implements IteratorAggregate, Countable
     /**
      * Load data
      *
-     * @return  Varien_Data_Collection
+     * @return  $this
      */
     public function loadData($printQuery = false, $logQuery = false)
     {
@@ -611,7 +613,7 @@ class Varien_Data_Collection implements IteratorAggregate, Countable
     /**
      * Load data
      *
-     * @return  Varien_Data_Collection
+     * @return  $this
      */
     public function load($printQuery = false, $logQuery = false)
     {
@@ -718,7 +720,7 @@ class Varien_Data_Collection implements IteratorAggregate, Countable
      * Retrieve item by id
      *
      * @param   mixed $idValue
-     * @return  Varien_Object
+     * @return  Varien_Object|null
      */
     public function getItemById($idValue)
     {
@@ -792,7 +794,7 @@ class Varien_Data_Collection implements IteratorAggregate, Countable
      *
      * @param string $flag
      * @param mixed $value
-     * @return Varien_Data_Collection
+     * @return $this
      */
     public function setFlag($flag, $value = null)
     {

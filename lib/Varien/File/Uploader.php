@@ -180,7 +180,7 @@ class Varien_File_Uploader
      * @param string $destinationFolder
      * @param string $newFileName
      * @access public
-     * @return void|bool
+     * @return false|array
      */
     public function save($destinationFolder, $newFileName = null)
     {

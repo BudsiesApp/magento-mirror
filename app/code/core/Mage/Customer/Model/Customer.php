@@ -469,7 +469,7 @@ class Mage_Customer_Model_Customer extends Mage_Core_Model_Abstract
      * Retrieve default address by type(attribute)
      *
      * @param   string $attributeCode address type attribute code
-     * @return  Mage_Customer_Model_Address
+     * @return  false|Mage_Customer_Model_Address
      */
     public function getPrimaryAddress($attributeCode)
     {
@@ -480,8 +480,6 @@ class Mage_Customer_Model_Customer extends Mage_Core_Model_Abstract
 
     /**
      * Get customer default billing address
-     *
-     * @return Mage_Customer_Model_Address
      */
     public function getPrimaryBillingAddress()
     {
@@ -490,8 +488,6 @@ class Mage_Customer_Model_Customer extends Mage_Core_Model_Abstract
 
     /**
      * Get customer default billing address
-     *
-     * @return Mage_Customer_Model_Address
      */
     public function getDefaultBillingAddress()
     {
@@ -500,8 +496,6 @@ class Mage_Customer_Model_Customer extends Mage_Core_Model_Abstract
 
     /**
      * Get default customer shipping address
-     *
-     * @return Mage_Customer_Model_Address
      */
     public function getPrimaryShippingAddress()
     {
@@ -510,8 +504,6 @@ class Mage_Customer_Model_Customer extends Mage_Core_Model_Abstract
 
     /**
      * Get default customer shipping address
-     *
-     * @return Mage_Customer_Model_Address
      */
     public function getDefaultShippingAddress()
     {
@@ -857,7 +849,7 @@ class Mage_Customer_Model_Customer extends Mage_Core_Model_Abstract
      * Validate customer attribute values.
      * For existing customer password + confirmation will be validated only when password is set (i.e. its change is requested)
      *
-     * @return bool
+     * @return bool|string[]
      */
     public function validate()
     {

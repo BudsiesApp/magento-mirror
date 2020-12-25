@@ -203,7 +203,7 @@ abstract class Mage_Core_Controller_Varien_Action
      * @param   string $action
      * @param   string $flag
      * @param   string $value
-     * @return  Mage_Core_Controller_Varien_Action
+     * @return  $this
      */
     public function setFlag($action, $flag, $value)
     {
@@ -244,7 +244,7 @@ abstract class Mage_Core_Controller_Varien_Action
      * @param   string|null|bool $handles
      * @param   bool $generateBlocks
      * @param   bool $generateXml
-     * @return  Mage_Core_Controller_Varien_Action
+     * @return  $this
      */
     public function loadLayout($handles = null, $generateBlocks = true, $generateXml = true)
     {
@@ -358,7 +358,7 @@ abstract class Mage_Core_Controller_Varien_Action
      * Rendering layout
      *
      * @param   string $output
-     * @return  Mage_Core_Controller_Varien_Action
+     * @return  $this
      */
     public function renderLayout($output='')
     {
@@ -630,7 +630,7 @@ abstract class Mage_Core_Controller_Varien_Action
      * Initializing layout messages by message storage(s), loading and adding messages to layout messages block
      *
      * @param string|array $messagesStorage
-     * @return Mage_Core_Controller_Varien_Action
+     * @return $this
      */
     protected function _initLayoutMessages($messagesStorage)
     {
@@ -658,7 +658,7 @@ abstract class Mage_Core_Controller_Varien_Action
      * Initializing layout messages by message storage(s), loading and adding messages to layout messages block
      *
      * @param string|array $messagesStorage
-     * @return Mage_Core_Controller_Varien_Action
+     * @return $this
      */
     public function initLayoutMessages($messagesStorage)
     {
@@ -669,7 +669,7 @@ abstract class Mage_Core_Controller_Varien_Action
      * Set redirect url into response
      *
      * @param   string $url
-     * @return  Mage_Core_Controller_Varien_Action
+     * @return  $this
      */
     protected function _redirectUrl($url)
     {
@@ -682,7 +682,7 @@ abstract class Mage_Core_Controller_Varien_Action
      *
      * @param   string $path
      * @param   array $arguments
-     * @return  Mage_Core_Controller_Varien_Action
+     * @return  $this
      */
     protected function _redirect($path, $arguments = array())
     {
@@ -695,7 +695,7 @@ abstract class Mage_Core_Controller_Varien_Action
      *
      * @param   string $path
      * @param   array $arguments
-     * @return  Mage_Core_Controller_Varien_Action
+     * @return  $this
      */
     public function setRedirectWithCookieCheck($path, array $arguments = array())
     {
@@ -717,7 +717,7 @@ abstract class Mage_Core_Controller_Varien_Action
      * Redirect to success page
      *
      * @param string $defaultUrl
-     * @return Mage_Core_Controller_Varien_Action
+     * @return $this
      */
     protected function _redirectSuccess($defaultUrl)
     {
@@ -736,7 +736,7 @@ abstract class Mage_Core_Controller_Varien_Action
      * Redirect to error page
      *
      * @param string $defaultUrl
-     * @return  Mage_Core_Controller_Varien_Action
+     * @return  $this
      */
     protected function _redirectError($defaultUrl)
     {
@@ -755,7 +755,7 @@ abstract class Mage_Core_Controller_Varien_Action
      * Set referer url for redirect in response
      *
      * @param   string $defaultUrl
-     * @return  Mage_Core_Controller_Varien_Action
+     * @return  $this
      */
     protected function _redirectReferer($defaultUrl=null)
     {
@@ -921,7 +921,7 @@ abstract class Mage_Core_Controller_Varien_Action
      * @see self::_renderTitles()
      * @param string|false|-1|null $text
      * @param bool $resetIfExists
-     * @return Mage_Core_Controller_Varien_Action
+     * @return $this
      */
     protected function _title($text = null, $resetIfExists = true)
     {
@@ -1033,7 +1033,7 @@ abstract class Mage_Core_Controller_Varien_Action
      *                              that case
      * @param string $contentType
      * @param int $contentLength    explicit content length, if strlen($content) isn't applicable
-     * @return Mage_Core_Controller_Varien_Action
+     * @return $this
      */
     protected function _prepareDownloadResponse(
         $fileName,

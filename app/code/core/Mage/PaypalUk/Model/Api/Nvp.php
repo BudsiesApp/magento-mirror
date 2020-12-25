@@ -478,7 +478,7 @@ class Mage_PaypalUk_Model_Api_Nvp extends Mage_Paypal_Model_Api_Nvp
      * Catch success calls and collect warnings
      *
      * @param array
-     * @return bool| success flag
+     * @return bool success flag
      */
     protected function _isCallSuccessful($response)
     {

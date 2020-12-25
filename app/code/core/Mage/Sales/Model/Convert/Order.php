@@ -109,7 +109,7 @@ class Mage_Sales_Model_Convert_Order extends Varien_Object
      * Retrieve
      *
      * @param Mage_Sales_Model_Order_Item $item
-     * @return unknown
+     * @return mixed
      */
     public function itemToQuoteItem(Mage_Sales_Model_Order_Item $item)
     {

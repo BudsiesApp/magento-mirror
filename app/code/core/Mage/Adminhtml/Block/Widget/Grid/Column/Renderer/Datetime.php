@@ -43,7 +43,7 @@ class Mage_Adminhtml_Block_Widget_Grid_Column_Renderer_Datetime
     /**
      * Retrieve datetime format
      *
-     * @return unknown
+     * @return mixed
      */
     protected function _getFormat()
     {

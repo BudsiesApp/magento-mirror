@@ -48,7 +48,7 @@ class Mage_Adminhtml_Block_Sales_Order_View_Items extends Mage_Adminhtml_Block_S
     /**
      * Retrieve order items collection
      *
-     * @return unknown
+     * @return mixed
      */
     public function getItemsCollection()
     {

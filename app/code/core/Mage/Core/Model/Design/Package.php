@@ -154,7 +154,7 @@ class Mage_Core_Model_Design_Package
     /**
      * Retrieve package area
      *
-     * @return unknown
+     * @return mixed
      */
     public function getArea()
     {

@@ -469,7 +469,7 @@ class Mage_Core_Model_App
      *
      * @param string $scopeCode code of default scope (website/store_group/store code)
      * @param string $scopeType type of default scope (website/group/store)
-     * @return unknown_type
+     * @return mixed
      */
     protected function _initCurrentStore($scopeCode, $scopeType)
     {

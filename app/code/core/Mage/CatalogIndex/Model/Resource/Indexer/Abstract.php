@@ -49,7 +49,7 @@ class Mage_CatalogIndex_Model_Resource_Indexer_Abstract extends Mage_Core_Model_
      * @param unknown_type $data
      * @param unknown_type $storeId
      * @param unknown_type $productId
-     * @return unknown
+     * @return mixed
      */
     public function saveIndex($data, $storeId, $productId)
     {
@@ -118,7 +118,7 @@ class Mage_CatalogIndex_Model_Resource_Indexer_Abstract extends Mage_Core_Model_
      * Enter description here ...
      *
      * @param unknown_type $conditions
-     * @return unknown
+     * @return mixed
      */
     public function loadAttributeCodesByCondition($conditions)
     {

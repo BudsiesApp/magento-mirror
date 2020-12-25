@@ -195,7 +195,7 @@ class Mage_GiftMessage_Helper_Message extends Mage_Core_Helper_Data
      * Retrive escaped and preformated gift message text for specified entity
      *
      * @param Varien_Object $entity
-     * @return unknown
+     * @return mixed
      */
     public function getEscapedGiftMessage(Varien_Object $entity)
     {

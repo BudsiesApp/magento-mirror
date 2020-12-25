@@ -197,7 +197,7 @@ class Mage_Dataflow_Model_Batch_Io
     /**
      * Get writed file size
      *
-     * @return unknown
+     * @return mixed
      */
     public function getFileSize()
     {

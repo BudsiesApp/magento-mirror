@@ -131,7 +131,7 @@ class Mage_Catalog_Helper_Product extends Mage_Core_Helper_Url
     /**
      * Retrieve small image url
      *
-     * @return unknown
+     * @return mixed
      */
     public function getSmallImageUrl($product)
     {
@@ -148,7 +148,7 @@ class Mage_Catalog_Helper_Product extends Mage_Core_Helper_Url
     /**
      * Retrieve thumbnail image url
      *
-     * @return unknown
+     * @return mixed
      */
     public function getThumbnailUrl($product)
     {

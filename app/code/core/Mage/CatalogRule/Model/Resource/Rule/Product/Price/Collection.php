@@ -48,7 +48,7 @@ class Mage_CatalogRule_Model_Resource_Rule_Product_Price_Collection
     /**
      * Enter description here ...
      *
-     * @return unknown
+     * @return mixed
      */
     public function getProductIds()
     {

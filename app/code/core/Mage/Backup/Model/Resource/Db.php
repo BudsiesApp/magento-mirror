@@ -193,7 +193,7 @@ class Mage_Backup_Model_Resource_Db
      *
      * @param unknown_type $tableName
      * @param unknown_type $addDropIfExists
-     * @return unknown
+     * @return mixed
      */
     public function getTableCreateScript($tableName, $addDropIfExists = false)
     {

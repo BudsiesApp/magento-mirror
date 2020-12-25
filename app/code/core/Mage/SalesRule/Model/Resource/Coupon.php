@@ -72,7 +72,7 @@ class Mage_SalesRule_Model_Resource_Coupon extends Mage_Core_Model_Resource_Db_A
      *
      * @param Mage_SalesRule_Model_Coupon $object
      * @param Mage_SalesRule_Model_Rule|int $rule
-     * @return unknown
+     * @return mixed
      */
     public function loadPrimaryByRule(Mage_SalesRule_Model_Coupon $object, $rule)
     {

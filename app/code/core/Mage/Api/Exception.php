@@ -44,7 +44,7 @@ class Mage_Api_Exception extends Mage_Core_Exception
     /**
      * Custom error message, if error is not in api.
      *
-     * @return unknown
+     * @return mixed
      */
     public function getCustomMessage()
     {

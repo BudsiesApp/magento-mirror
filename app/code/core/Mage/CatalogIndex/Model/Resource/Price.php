@@ -77,7 +77,7 @@ class Mage_CatalogIndex_Model_Resource_Price extends Mage_CatalogIndex_Model_Res
     /**
      * Enter description here ...
      *
-     * @return unknown
+     * @return mixed
      */
     public function getRate()
     {
@@ -100,7 +100,7 @@ class Mage_CatalogIndex_Model_Resource_Price extends Mage_CatalogIndex_Model_Res
     /**
      * Enter description here ...
      *
-     * @return unknown
+     * @return mixed
      */
     public function getCustomerGroupId()
     {
@@ -112,7 +112,7 @@ class Mage_CatalogIndex_Model_Resource_Price extends Mage_CatalogIndex_Model_Res
      *
      * @param unknown_type $attribute
      * @param unknown_type $entitySelect
-     * @return unknown
+     * @return mixed
      */
     public function getMaxValue($attribute, $entitySelect)
     {
@@ -152,7 +152,7 @@ class Mage_CatalogIndex_Model_Resource_Price extends Mage_CatalogIndex_Model_Res
      * @param unknown_type $range
      * @param unknown_type $attribute
      * @param unknown_type $entitySelect
-     * @return unknown
+     * @return mixed
      */
     public function getCount($range, $attribute, $entitySelect)
     {
@@ -204,7 +204,7 @@ class Mage_CatalogIndex_Model_Resource_Price extends Mage_CatalogIndex_Model_Res
      * @param unknown_type $attribute
      * @param unknown_type $entityIdsFilter
      * @param unknown_type $tableName
-     * @return unknown
+     * @return mixed
      */
     public function getFilteredEntities($range, $index, $attribute, $entityIdsFilter, $tableName = 'price_table')
     {
@@ -291,7 +291,7 @@ class Mage_CatalogIndex_Model_Resource_Price extends Mage_CatalogIndex_Model_Res
      * Enter description here ...
      *
      * @param unknown_type $ids
-     * @return unknown
+     * @return mixed
      */
     public function getMinimalPrices($ids)
     {

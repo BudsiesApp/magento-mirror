@@ -262,7 +262,7 @@ class Mage_Adminhtml_Model_Sales_Order_Create extends Varien_Object implements M
      * Initialize creation data from existing order
      *
      * @param Mage_Sales_Model_Order $order
-     * @return unknown
+     * @return mixed
      */
     public function initFromOrder(Mage_Sales_Model_Order $order)
     {
@@ -1755,7 +1755,7 @@ class Mage_Adminhtml_Model_Sales_Order_Create extends Varien_Object implements M
 
     /**
      * @deprecated after 1.1.7
-     * @return unknown
+     * @return mixed
      */
     protected function _saveCustomer()
     {

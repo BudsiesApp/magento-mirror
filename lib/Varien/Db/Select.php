@@ -101,7 +101,7 @@ class Varien_Db_Select extends Zend_Db_Select
      * </code>
      *
      * @param string   $cond  The WHERE condition.
-     * @param string|array   $value OPTIONAL A single value to quote into the condition.
+     * @param string|array|int   $value OPTIONAL A single value to quote into the condition.
      * @param constant $type  OPTIONAL The type of the given value
      * @return Varien_Db_Select This Zend_Db_Select object.
      */
