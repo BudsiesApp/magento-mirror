@@ -206,7 +206,7 @@ abstract class Mage_Reports_Model_Resource_Report_Abstract extends Mage_Core_Mod
      *
      * @param Varien_Db_Select $select
      * @param string $periodColumn
-     * @return unknown
+     * @return mixed
      */
     protected function _makeConditionFromDateRangeSelect($select, $periodColumn)
     {

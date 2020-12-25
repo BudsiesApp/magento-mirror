@@ -238,8 +238,8 @@ class Mage_Sales_Model_Order_Invoice_Api extends Mage_Sales_Model_Api_Resource
     /**
      * Void invoice
      *
-     * @param unknown_type $invoiceIncrementId
-     * @return unknown
+     * @param mixed $invoiceIncrementId
+     * @return mixed
      */
     public function void($invoiceIncrementId)
     {

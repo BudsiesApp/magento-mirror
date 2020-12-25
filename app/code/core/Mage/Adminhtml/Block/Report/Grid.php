@@ -424,7 +424,7 @@ class Mage_Adminhtml_Block_Report_Grid extends Mage_Adminhtml_Block_Widget_Grid
     /**
      * Retrieve grid as CSV
      *
-     * @return unknown
+     * @return mixed
      */
     public function getCsv()
     {
@@ -487,7 +487,7 @@ class Mage_Adminhtml_Block_Report_Grid extends Mage_Adminhtml_Block_Widget_Grid
     /**
      * Retrieve grid as Excel Xml
      *
-     * @return unknown
+     * @return mixed
      */
     public function getExcel($filename = '')
     {

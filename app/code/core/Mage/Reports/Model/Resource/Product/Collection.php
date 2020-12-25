@@ -175,7 +175,7 @@ class Mage_Reports_Model_Resource_Product_Collection extends Mage_Catalog_Model_
     /**
      * Get select count sql
      *
-     * @return unknown
+     * @return mixed
      */
     public function getSelectCountSql()
     {

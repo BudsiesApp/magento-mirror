@@ -54,7 +54,7 @@ class Mage_Adminhtml_Block_Widget_Grid extends Mage_Adminhtml_Block_Widget
     /**
      * Collection object
      *
-     * @var Varien_Data_Collection
+     * @var Varien_Data_Collection|null
      */
     protected $_collection = null;
 
@@ -292,7 +292,7 @@ class Mage_Adminhtml_Block_Widget_Grid extends Mage_Adminhtml_Block_Widget
     /**
      * get collection object
      *
-     * @return Varien_Data_Collection
+     * @return Varien_Data_Collection|null
      */
     public function getCollection()
     {
@@ -606,7 +606,7 @@ class Mage_Adminhtml_Block_Widget_Grid extends Mage_Adminhtml_Block_Widget
     /**
      * Prepare grid massaction column
      *
-     * @return unknown
+     * @return mixed
      */
     protected function _prepareMassactionColumn()
     {
@@ -1556,7 +1556,7 @@ class Mage_Adminhtml_Block_Widget_Grid extends Mage_Adminhtml_Block_Widget
     /**
      * Retrieve columns to render
      *
-     * @return unknown
+     * @return mixed
      */
     public function getSubTotalColumns() {
         return $this->getColumns();

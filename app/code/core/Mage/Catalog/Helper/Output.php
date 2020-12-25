@@ -97,7 +97,7 @@ class Mage_Catalog_Helper_Output extends Mage_Core_Helper_Abstract
      * @param   string $method
      * @param   mixed $result
      * @param   array $params
-     * @return unknown
+     * @return mixed
      */
     public function process($method, $result, $params)
     {

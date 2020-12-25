@@ -45,7 +45,7 @@ abstract class Mage_Eav_Model_Entity_Attribute_Source_Abstract
     /**
      * Options array
      *
-     * @var array
+     * @var array|null
      */
     protected $_options                 = null;
 

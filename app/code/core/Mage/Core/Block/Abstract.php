@@ -137,7 +137,7 @@ abstract class Mage_Core_Block_Abstract extends Varien_Object
     /**
      * Parent block
      *
-     * @var Mage_Core_Block_Abstract
+     * @var Mage_Core_Block_Abstract|null
      */
     protected $_parentBlock;
 
@@ -255,7 +255,7 @@ abstract class Mage_Core_Block_Abstract extends Varien_Object
     /**
      * Retrieve parent block
      *
-     * @return Mage_Core_Block_Abstract
+     * @return Mage_Core_Block_Abstract|null
      */
     public function getParentBlock()
     {

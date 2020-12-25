@@ -284,7 +284,7 @@ class Mage_Reports_Model_Resource_Quote_Collection extends Mage_Sales_Model_Reso
     /**
      * Get select count sql
      *
-     * @return unknown
+     * @return mixed
      */
     public function getSelectCountSql()
     {

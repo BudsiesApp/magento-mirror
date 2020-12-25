@@ -92,7 +92,7 @@ class Mage_Adminhtml_Block_Sales_Order_Shipment_Packaging_Grid extends Mage_Admi
     /**
      * Format price
      *
-     * @param   decimal $value
+     * @param   float $value
      * @return  double
      */
     public function formatPrice($value)

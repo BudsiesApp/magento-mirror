@@ -49,7 +49,7 @@ class Mage_CatalogIndex_Model_Resource_Attribute extends Mage_CatalogIndex_Model
      * @param unknown_type $attribute
      * @param unknown_type $filter
      * @param unknown_type $entityFilter
-     * @return unknown
+     * @return mixed
      */
     public function getFilteredEntities($attribute, $filter, $entityFilter)
     {
@@ -71,7 +71,7 @@ class Mage_CatalogIndex_Model_Resource_Attribute extends Mage_CatalogIndex_Model
      *
      * @param unknown_type $attribute
      * @param unknown_type $entitySelect
-     * @return unknown
+     * @return mixed
      */
     public function getCount($attribute, $entitySelect)
     {

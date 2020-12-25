@@ -85,7 +85,7 @@ class Mage_CatalogIndex_Model_Resource_Data_Abstract extends Mage_Core_Model_Res
      * @param array $products
      * @param array $attributes
      * @param int $store
-     * @return unknown
+     * @return mixed
      */
     public function getAttributeData($products, $attributes, $store)
     {

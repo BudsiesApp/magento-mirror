@@ -180,7 +180,7 @@ class Mage_Poll_Model_Poll extends Mage_Core_Model_Abstract
     /**
      * Add vote to poll
      *
-     * @return unknown
+     * @return mixed
      */
     public function addVote(Mage_Poll_Model_Poll_Vote $vote)
     {

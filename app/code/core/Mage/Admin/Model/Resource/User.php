@@ -110,7 +110,7 @@ class Mage_Admin_Model_Resource_User extends Mage_Core_Model_Resource_Db_Abstrac
     /**
      * Check if user is assigned to any role
      *
-     * @param int|Mage_Core_Admin_Model_User $user
+     * @param int|Mage_Admin_Model_User $user
      * @return null|false|array
      */
     public function hasAssigned2Role($user)

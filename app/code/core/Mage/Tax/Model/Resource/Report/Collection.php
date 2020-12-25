@@ -70,7 +70,7 @@ class Mage_Tax_Model_Resource_Report_Collection extends Mage_Sales_Model_Resourc
     /**
      * Enter description here ...
      *
-     * @return unknown
+     * @return mixed
      */
     protected function _getSelectedColumns()
     {

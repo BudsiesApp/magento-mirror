@@ -204,7 +204,7 @@ class Mage_Catalog_Model_Product extends Mage_Catalog_Model_Abstract
     /**
      * Get product price throught type instance
      *
-     * @return unknown
+     * @return mixed
      */
     public function getPrice()
     {
@@ -1008,7 +1008,7 @@ class Mage_Catalog_Model_Product extends Mage_Catalog_Model_Abstract
     /**
      * Retrive media gallery images
      *
-     * @return Varien_Data_Collection
+     * @return Varien_Data_Collection|null
      */
     public function getMediaGalleryImages()
     {
@@ -1598,7 +1598,7 @@ class Mage_Catalog_Model_Product extends Mage_Catalog_Model_Abstract
     /**
      * Retrieve weight throught type instance
      *
-     * @return unknown
+     * @return mixed
      */
     public function getWeight()
     {
@@ -2100,7 +2100,7 @@ class Mage_Catalog_Model_Product extends Mage_Catalog_Model_Abstract
     /**
      *  Checks event attribute for initialization as an event object
      *
-     * @return bool | Enterprise_CatalogEvent_Model_Event
+     * @return false|mixed
      */
     public function getEvent()
     {

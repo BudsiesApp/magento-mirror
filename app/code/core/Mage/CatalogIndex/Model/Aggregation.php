@@ -158,7 +158,7 @@ class Mage_CatalogIndex_Model_Aggregation extends Mage_Core_Model_Abstract
      * different tags: category, category1, category2, category3
      *
      * @param unknown_type $tags
-     * @return unknown
+     * @return mixed
      */
     protected function _processTags($tags)
     {

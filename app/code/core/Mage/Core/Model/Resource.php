@@ -359,7 +359,7 @@ class Mage_Core_Model_Resource
      * @param string $name
      * @param string $type
      * @param array $config
-     * @return unknown
+     * @return mixed
      */
     public function createConnection($name, $type, $config)
     {

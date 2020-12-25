@@ -68,7 +68,7 @@ class Mage_CatalogIndex_Model_Resource_Indexer extends Mage_Core_Model_Resource_
      * Enter description here ...
      *
      * @param unknown_type $id
-     * @return unknown
+     * @return mixed
      */
     protected function _loadAttribute($id)
     {

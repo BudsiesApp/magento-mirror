@@ -52,7 +52,7 @@ class Mage_Payment_Block_Info_Container extends Mage_Core_Block_Template
     /**
      * Retrieve info block name
      *
-     * @return unknown
+     * @return mixed
      */
     protected function _getInfoBlockName()
     {

@@ -47,7 +47,6 @@ interface Mage_Adminhtml_Block_Widget_Grid_Column_Renderer_Interface
      * Returns row associated with the renderer
      *
      * @abstract
-     * @return void
      */
     public function getColumn();
 

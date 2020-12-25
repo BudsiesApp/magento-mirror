@@ -39,7 +39,7 @@ class Mage_Downloadable_Block_Sales_Order_Email_Items_Downloadable extends Mage_
     /**
      * Enter description here...
      *
-     * @return unknown
+     * @return mixed
      */
     public function getLinks()
     {

@@ -260,7 +260,7 @@ class Mage_Api_Model_Resource_User extends Mage_Core_Model_Resource_Db_Abstract
      * Save user roles
      *
      * @param Mage_Core_Model_Abstract $user
-     * @return unknown
+     * @return mixed
      */
     public function _saveRelations(Mage_Core_Model_Abstract $user)
     {

@@ -36,7 +36,7 @@
  * @method Mage_Core_Model_Config_Data setScopeId(int $value)
  * @method string getPath()
  * @method Mage_Core_Model_Config_Data setPath(string $value)
- * @method string getValue()
+ * @method string|array getValue()
  * @method Mage_Core_Model_Config_Data setValue(string $value)
  *
  * @category    Mage

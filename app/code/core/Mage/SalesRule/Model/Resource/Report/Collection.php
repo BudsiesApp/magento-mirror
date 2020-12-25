@@ -77,7 +77,7 @@ class Mage_SalesRule_Model_Resource_Report_Collection extends Mage_Sales_Model_R
     /**
      * collect columns for collection
      *
-     * @return unknown
+     * @return mixed
      */
     protected function _getSelectedColumns()
     {

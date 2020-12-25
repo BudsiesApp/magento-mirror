@@ -219,7 +219,7 @@ abstract class Mage_Catalog_Model_Abstract extends Mage_Core_Model_Abstract
      * @param Mage_Eav_Model_Entity_Attribute_Interface|integer|string|array $attribute
      * @param null|string|array $value
      * @param string $additionalAttributes
-     * @return bool|Mage_Catalog_Model_Abstract
+     * @return false|Mage_Catalog_Model_Abstract
      */
     public function loadByAttribute($attribute, $value, $additionalAttributes = '*')
     {

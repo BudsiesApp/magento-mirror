@@ -207,7 +207,7 @@ class Mage_Reports_Model_Event_Observer
      * Reset count of compared products cache
      *
      * @param Varien_Event_Observer $observer
-     * @return unknown
+     * @return mixed
      */
     public function catalogProductCompareAddProduct(Varien_Event_Observer $observer)
     {

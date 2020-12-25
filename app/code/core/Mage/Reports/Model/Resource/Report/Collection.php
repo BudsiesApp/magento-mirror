@@ -122,7 +122,7 @@ class Mage_Reports_Model_Resource_Report_Collection
     /**
      * Get intervals
      *
-     * @return unknown
+     * @return mixed
      */
     public function getIntervals()
     {
@@ -279,7 +279,7 @@ class Mage_Reports_Model_Resource_Report_Collection
      *
      * @param int $from
      * @param int $to
-     * @return unknown
+     * @return mixed
      */
     public function getReportFull($from, $to)
     {
@@ -301,7 +301,7 @@ class Mage_Reports_Model_Resource_Report_Collection
     /**
      * Retreive time shift
      *
-     * @param string $datetime
+     * @param string|integer|Zend_Date|array|null $datetime
      * @return string
      */
     public function timeShift($datetime)

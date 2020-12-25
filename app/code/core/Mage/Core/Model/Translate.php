@@ -358,7 +358,7 @@ class Mage_Core_Model_Translate
     /**
      * Retrieve DB resource model
      *
-     * @return unknown
+     * @return mixed
      */
     public function getResource()
     {

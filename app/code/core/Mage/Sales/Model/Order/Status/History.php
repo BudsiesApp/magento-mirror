@@ -137,7 +137,7 @@ class Mage_Sales_Model_Order_Status_History extends Mage_Sales_Model_Abstract
     /**
      * Get store object
      *
-     * @return unknown
+     * @return mixed
      */
     public function getStore()
     {

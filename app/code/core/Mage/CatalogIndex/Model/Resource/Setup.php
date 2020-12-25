@@ -59,7 +59,7 @@ class Mage_CatalogIndex_Model_Resource_Setup extends Mage_Core_Model_Resource_Se
     /**
      * Enter description here ...
      *
-     * @return unknown
+     * @return mixed
      */
     protected function _getStoreToWebsiteAssignments()
     {

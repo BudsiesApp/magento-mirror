@@ -38,7 +38,7 @@ class Mage_Downloadable_Block_Sales_Order_Item_Renderer_Downloadable extends Mag
     /**
      * Enter description here...
      *
-     * @return unknown
+     * @return mixed
      */
     public function getLinks()
     {

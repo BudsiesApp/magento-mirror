@@ -460,7 +460,7 @@ abstract class Mage_Core_Model_Abstract extends Varien_Object
     /**
      * Delete object from database
      *
-     * @return Mage_Core_Model_Abstract
+     * @return $this
      */
     public function delete()
     {
@@ -483,7 +483,7 @@ abstract class Mage_Core_Model_Abstract extends Varien_Object
     /**
      * Processing object before delete data
      *
-     * @return Mage_Core_Model_Abstract
+     * @return $this
      */
     protected function _beforeDelete()
     {
